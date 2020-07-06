@@ -10,3 +10,40 @@
 body {
   font-family: Roboto, sans-serif;
 }
+.container {
+  padding: 0 15%;
+}
+a {
+  text-decoration: none;
+  color: #aaa;
+}
+a:hover {
+  color: #191c1f;
+}
+.active {
+  color: #191c1f;
+}
+ul {
+  list-style: none;
+}
+li {
+  padding: 10px;
+}
+.header-nav-top {
+  background-color: #f3f4f5;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-menu-top-left {
+ line-height: 40px;
+ display: flex;
+ flex-wrap: nowrap;
+ justify-content: flex-start;
+}
+.header-menu-top-right {
+  line-height: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
