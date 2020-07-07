@@ -1,7 +1,4 @@
-@font-face {
-  font-family: Roboto;
-  src: url(../font/Roboto-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -10,26 +7,28 @@
 /* stili generali */
 body {
   font-family: Roboto, sans-serif;
+  color: rgb(25, 28, 31);
 }
 .container {
   padding: 0 15%;
 }
 a {
   text-decoration: none;
-  color: #999;
+  color: rgb(25, 28, 31);
+  opacity: 0.5;
 }
 a:hover {
-  color: #191c1f;
-  transition: 0.5s;
+  opacity: 1;
+  transition: color 0.1s ease 0s, opacity 0.1s ease 0s;
 }
 .active {
-  color: #191c1f;
+  opacity: 1;
 }
 ul {
   list-style: none;
 }
 li {
-  padding: 10px 30px;
+  padding: 10px 25px;
 }
 .button {
   color: #f3f4f5;
@@ -40,7 +39,7 @@ li {
 }
 .button:hover {
   background-color: rgba(0, 0, 0, 0.7);
-  transition: 0.5s;
+  transition: 0.1s;
   cursor: pointer;
 }
 .uppercase {
@@ -54,6 +53,9 @@ li {
   vertical-align: text-bottom;
   font-size: 12px;
   font-weight: bold;
+}
+.fas {
+  padding-right: 10px;
 }
 /* navbar superiore */
 .header-nav-top {
@@ -74,6 +76,12 @@ li {
 .header-menu-top-right {
   justify-content: flex-end;
 }
+.header-menu-top-left li:first-of-type {
+  padding-left: 0;
+}
+.header-menu-top-right li:last-of-type {
+  padding-right: 0;
+}
 /* navbar inferiore */
 .header-nav {
   height: 100px;
@@ -93,13 +101,13 @@ li {
   background: white;
   border-radius: 10px;
   filter: drop-shadow(2px 2px 4px #ccc);
-  min-width: 200px;
+  min-width: 150px;
   padding: 10px 0;
 }
 .dropdown::before {
   position: absolute;
   top: -10px;
-  left: 30%;
+  left: 40px;
   content: '';
   display: block;
   background-color: white;
@@ -118,4 +126,42 @@ li {
 .menu-dropdown li {
   padding: 5px 20px;
   white-space: nowrap;
+}
+/* jumbo */
+.jumbo-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.jumbo-info {
+  flex-basis: 40%;
+}
+.jumbo-img {
+  flex-basis: 50%;
+}
+.jumbo-info h1 {
+  font-size: 80px;
+  font-weight: bold;
+  padding: 40px 0;
+}
+.jumbo-info p {
+  opacity: 0.5;
+  font-size: 18px;
+}
+.jumbo-form {
+  padding: 40px 0;
+}
+.jumbo-form input,
+.jumbo-form select {
+  border: none;
+  border-bottom: 1px solid rgba(25, 28, 31, 0.5);
+  height: 30px;
+  margin-right: 20px;
+}
+.jumbo-info p:last-of-type {
+  opacity: 1;
+}
+.jumbo-img img {
+  height: 600px;
 }
